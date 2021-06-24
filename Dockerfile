@@ -4,7 +4,7 @@ FROM nvidia/cuda:11.1.1-devel-ubuntu20.04
 # After installation, the path of the executable is: $PREFIX/gromacs/bin/GMXRC
 # --- Prepare system ---
 USER root 
-WORKDIR $PREFIX
+WORKDIR /opt
 
 RUN apt-get update && apt-get install --yes openmpi-bin wget vim htop cmake python3 python3-dev
 #   apt upgrade --yes
